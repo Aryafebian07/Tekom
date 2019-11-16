@@ -270,6 +270,7 @@ Route::post('contact', 'FrontEndController@postContact')->name('contact');
 // }]);
 Route::get('/','HomeController@index')->name('home');
 Route::get('/gallery','HomeController@gallery_index')->name('gallery');
+Route::get('/tugas-akhir','HomeController@tugasakhir_index')->name('tugasakhir');
 
 Route::get('news','BlogController@index')->name('news');
 Route::get('news/{slug}/tag', 'BlogController@getBlogTag');

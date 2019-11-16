@@ -199,7 +199,10 @@
                     </li>
                     <li class="nav-item {!! (Request::is(
                         'gallery') ? 'active' : '') !!}"><a href="{{ URL::to('gallery') }}" class="nav-link">Gallery</a>
-                        </li>
+                    </li>
+                    <li class="nav-item {!! (Request::is(
+                        'tugas-akhir') ? 'active' : '') !!}"><a href="{{ URL::to('tugas-akhir') }}" class="nav-link">TA</a>
+                    </li>
                     {{-- <li class="nav-item {!! (Request::is(
                     'contact') ? 'active' : '') !!}"><a href="{{ URL::to('contact') }}" class="nav-link">Contact</a>
                     </li> --}}
@@ -241,10 +244,7 @@
                 <div class="col-sm-4 col-lg-4 col-md-4 col-12">
                     <h4>About Us</h4>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industryzzzz's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                            Program Studi ini mengembangkan kemampuan mahasiswa dalam ilmu pengetahuan dan teknologi dari mendesain, membangun, mengimplementasikan, dan memelihara perangkat lunak (software) dan perangkat keras (hardware) dari sistem komputasi modern, peralatan yang dikontrol komputer, dan Perangkat jaringan internet. Ilmu ini mengintegrasikan teknik elektro dan ilmu komputer.
                     </p>
                     <hr id="hr_border2">
                     <h4 class="menu">Follow Us</h4>
@@ -317,7 +317,7 @@
                                 <textarea name="contact-msg" class="form-control input-lg no-resize resize_vertical" rows="6" placeholder="Your comment" required></textarea>
                             </div>
                             <div class="input-group">
-                                <button class="btn btn-primary mr-1" type="submit">submit</button>
+                                <button class="btn btn-primary mr-1" type="submit">Submit</button>
                                 <button class="btn btn-danger" type="reset">Reset</button>
                             </div>
                         </form>
@@ -335,7 +335,7 @@
 </footer>
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" data-original-title="Return to top"
    data-toggle="tooltip" data-placement="left">
-    <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
+    <i class="livicon" data-name="angle-double-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
 </a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

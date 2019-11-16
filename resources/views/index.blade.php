@@ -56,13 +56,15 @@ Home
 
 {{-- content --}}
 @section('content')
-<div class="container">
-    <!-- Focus Section Start-->
-    <div class="row" id="focus">
-            <div class="col-12 text-center my-3">
+<!-- Focus Section Start-->
+<section class="feature-main1">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 my-3">
                 <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Graduate</span></h3>
             </div>
-        <!-- Programing Section Start -->
+        </div>
+    <div class="row" id="focus">
             <div class="col-12 my-4">
                 <div class="owl-carousel owl-theme" id="fcs-carousel">
                     @foreach($foci as $focus)
@@ -84,33 +86,17 @@ Home
                 </div>
             </div>
         </div>
-        {{-- <div class="col-sm-6 col-md-6  col-lg-4 col-12 wow bounceInUp" data-wow-duration="3s" data-wow-delay="0.8s">
-            <div class="box">
-                <div class="box-icon box-icon2">
-                    <i class="livicon icon1" data-name="desktop" data-size="55" data-loop="true" data-c="#f89a14"
-                       data-hc="#f89a14"></i>
-                </div>
-                <div class="info">
-                    <h3 class="warning text-center">Programing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur
-                        corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem
-                        architecto perferendis quas aperiam debitis dolor soluta!</p>
-                    <div class="text-right primary"><a href="#">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!-- //Programing Section End -->
     </div>
-    <!-- //Focus Section End -->
-</div>
+</section>
 <!-- News Section Start -->
 <section class="feature-main">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 mt-20 text-center">
-                <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">News</span></h3></div>
+        <div class="row text-center">
+            <div class="col-12 my-3">
+                <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">News</span></h3>
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12 worlnews">
                     <div class="owl-carousel owl-theme" id="carousel">
                         @foreach($blogs as $blog)
@@ -151,213 +137,230 @@ Home
 </section>
 <!-- //News Section Start -->
 <!-- Profile Section End -->
-<div class="container">
-    <div class="row">
-        <!-- Profile Start -->
-        <div class="text-center col-12 wow flash my-3" data-wow-duration="3s">
-                <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Profile</span></h3>
-        </div>
-        <!-- Profile End -->
-        @foreach ($prodis as $prodi)
-        <div class="col-md-6 col-sm-12  col-lg-6 col-12 wow slideInLeft" data-wow-duration="1.5s">
-            <div id="profile">
-                <div class="card mb-2">
-                    <div class="card-header p-0" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fa fa-minus success"></i>
-                                <span class="success">Visi</span>
-                            </button>
-                        </h5>
-                    </div>
+<section class="feature-main1">
+    <div class="container">
+        <div class="row">
+            <!-- Profile Start -->
+            <div class="text-center col-12 wow flash my-3" data-wow-duration="3s">
+                    <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Profile</span></h3>
+            </div>
+            <!-- Profile End -->
+            @foreach ($prodis as $prodi)
+            <div class="col-md-6 col-sm-12  col-lg-6 col-12 wow slideInLeft" data-wow-duration="1.5s">
+                <div id="profile">
+                    <div class="card mb-2">
+                        <div class="card-header p-0" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-minus success"></i>
+                                    <span class="success">Visi</span>
+                                </button>
+                            </h5>
+                        </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#profile">
-                        <div class="card-body">
-                            <p class="text-justify">
-                                {!! $prodi->visi !!}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-header p-0" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa fa-plus success"></i>
-                                <span class="success">Misi</span>
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#profile">
-                        <div class="card-body">
-                            <p class="text-justify">
-                                {!! $prodi->misi !!}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-header p-0" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa fa-plus success"></i>
-                                <span class="success">Tujuan</span>
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#profile">
-                        <div class="card-body">
-                            <p class="text-justify">
-                                {!! $prodi->tujuan !!}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-12 col-lg-6 wow slideInRight" data-wow-duration="3s">
-            <div class="">
-                <div class="thumbnail" style="width:100%; height:400px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.754684194865!2d106.91037294992667!3d-6.919903369626891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684829c6dffdd5%3A0xecbbf1784114f3d8!2sPoliteknik%20Sukabumi!5e0!3m2!1sen!2sid!4v1570091783557!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endforeach
-<!-- //Profile Section End -->
-<!-- Dosen Start -->
-<div class="container">
-    <div class="row text-center">
-        <div class="col-12 my-3">
-            <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Dosen</span></h3>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="col-12 my-3">
-            <div class="owl-carousel owl-theme" id="dsn-carousel">
-                @foreach ($dosens as $dosen)
-                <div class="item">
-                        <div class="thumbnail bg-white">
-                            @if($dosen->image)
-                                <img src="{{URL::to('uploads/dosens/'.$dosen->image)}}" alt="img" style="width: 240px; height: 240px;" class="img-responsive"/>
-                            @else
-                                <img src="{{ asset('images/authors/no_avatar.jpg') }}" alt="..." style="width: 240px; height: 240px;" class="img-responsive"/>
-                            @endif
-                            <div class="caption">
-                                <b>{!!$dosen->name_dosen!!}</b>
-                                <p class="text-center"> {!!$dosen->expertise!!}</p>
-                                {{-- <div class="divide">
-                                    <a href="#" class="divider">
-                                        <i class="livicon" data-name="facebook" data-size="22" data-loop="true" data-c="#3a5795"
-                                           data-hc="#3a5795"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="livicon" data-name="twitter" data-size="22" data-loop="true" data-c="#55acee"
-                                           data-hc="#55acee"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="livicon" data-name="google-plus" data-size="22" data-loop="true" data-c="#d73d32"
-                                           data-hc="#d73d32"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="livicon" data-name="linkedin" data-size="22" data-loop="true" data-c="#1b86bd"
-                                           data-hc="#1b86bd"></i>
-                                    </a>
-                                </div> --}}
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#profile">
+                            <div class="card-body">
+                                <p class="text-justify">
+                                    {!! $prodi->visi !!}
+                                </p>
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-<!-- Testimonial Start -->
-    <div class="row">
-        <div class="col-12 my-3">
-        <!-- Testimonial Section -->
-            <div class="row text-center">
-                <div class="col-12 my-3">
-                    <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Alumni</span></h3>
+                    <div class="card mb-2">
+                        <div class="card-header p-0" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-plus success"></i>
+                                    <span class="success">Misi</span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#profile">
+                            <div class="card-body">
+                                <p class="text-justify">
+                                    {!! $prodi->misi !!}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-header p-0" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-plus success"></i>
+                                    <span class="success">Tujuan</span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#profile">
+                            <div class="card-body">
+                                <p class="text-justify">
+                                    {!! $prodi->tujuan !!}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-12 my-3">
-                    <div class="owl-carousel owl-theme" id="nial-carousel">
-                        @foreach ($testimonials as $nial)
-                            <div class="item">
-                                <div class="author">
-                                    <img src="{{ asset('images/authors/avatar2.jpg') }}" alt="avatar2"
-                                         class="img-fluid rounded-circle float-left">
-                                    <p class="text-right">
-                                        {!!$nial->name!!}
-                                        <br>
-                                    <small class="text-right">{!!$nial->position!!}</small>
-                                    </p>
-                                    <p class="text-justify">
-                                        {!!$nial->impression !!}
-                                    </p>
+            <div class="col-md-6 col-sm-12 col-12 col-lg-6 wow slideInRight" data-wow-duration="3s">
+                <div class="">
+                    <div class="thumbnail" style="width:100%; height:400px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.754684194865!2d106.91037294992667!3d-6.919903369626891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684829c6dffdd5%3A0xecbbf1784114f3d8!2sPoliteknik%20Sukabumi!5e0!3m2!1sen!2sid!4v1570091783557!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!--     //Profile Section End -->
+<!-- Dosen Start -->
+<section class="feature-main">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 my-3">
+                <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Dosen</span></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 my-3">
+                <div class="owl-carousel owl-theme" id="dsn-carousel">
+                    @foreach ($dosens as $dosen)
+                    <div class="item">
+                            <div class="thumbnail bg-white">
+                                @if($dosen->image)
+                                    <img src="{{URL::to('uploads/dosens/'.$dosen->image)}}" alt="img" style="width: 240px; height: 240px;" class="img-responsive"/>
+                                @else
+                                    <img src="{{ asset('images/authors/no_avatar.jpg') }}" alt="..." style="width: 240px; height: 240px;" class="img-responsive"/>
+                                @endif
+                                <div class="caption">
+                                    <b>{!!$dosen->name_dosen!!}</b>
+                                    <p class="text-center"> {!!$dosen->expertise!!}</p>
+                                    {{-- <div class="divide">
+                                        <a href="#" class="divider">
+                                            <i class="livicon" data-name="facebook" data-size="22" data-loop="true" data-c="#3a5795"
+                                            data-hc="#3a5795"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="livicon" data-name="twitter" data-size="22" data-loop="true" data-c="#55acee"
+                                            data-hc="#55acee"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="livicon" data-name="google-plus" data-size="22" data-loop="true" data-c="#d73d32"
+                                            data-hc="#d73d32"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="livicon" data-name="linkedin" data-size="22" data-loop="true" data-c="#1b86bd"
+                                            data-hc="#1b86bd"></i>
+                                        </a>
+                                    </div> --}}
                                 </div>
                             </div>
-                        @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Dosen End -->
+<!-- Testimonial Start -->
+<section class="feature-main1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-3">
+            <!-- Testimonial Section -->
+                <div class="row text-center">
+                    <div class="col-12 my-3">
+                        <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Alumni</span></h3>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 my-3">
+                        <div class="owl-carousel owl-theme" id="nial-carousel">
+                            @foreach ($testimonials as $nial)
+                                <div class="item">
+                                    <div class="author">
+                                        <img src="{{ asset('images/authors/avatar2.jpg') }}" alt="avatar2"
+                                            class="img-fluid rounded-circle float-left">
+                                        <p class="text-right">
+                                            {!!$nial->name!!}
+                                            <br>
+                                        <small class="text-right">{!!$nial->position!!}</small>
+                                        </p>
+                                        <p class="text-justify">
+                                            {!!$nial->impression !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-    <!-- Gallery section Start -->
-    <div class="row">
-        <!-- Gallery Image -->
-        <div class="col-md-6 col-sm-6 col-lg-6 col-12">
-            <div class="text-left">
-                <div class="mt-2">
-                    <h4><span class="heading_border bg-warning">Photo Gallery</span></h4>
-                </div>
-                <div class="col-12 my-3">
-                    <div class="owl-carousel owl-theme" id="pgal-carousel">
-                        @foreach ($galleryphotos as $photo)
-                        <div class="item">
-                            <div class="thumbnail" href="#">
-                                <img src="{{ URL::to('/uploads/files/gallery/'.$photo->imagename)  }}"  class="img-fluid" id="img-item">
-                            </div>
-                        </div>
-                        @endforeach
+</section>
+<!-- Testimonial End -->
+<!-- Gallery section Start -->
+<section class="feature-main">
+    <div class="container">
+        <div class="row">
+            <!-- Gallery Image -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+                <div class="row text-center">
+                    <div class="col-12 my-3">
+                        <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Photo Gallery</span></h3>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- //Gallery Image End -->
-        <!-- Gallery Video Start -->
-        <div class="col-md-6 col-sm-6 col-lg-6 col-12">
-            <div class="text-left">
-                <div class="mt-2">
-                    <h4><span class="heading_border bg-warning">Video Gallery</span></h4>
-                </div>
-                <div class="col-12 my-3">
-                    <div class="owl-carousel owl-theme" id="vgal-carousel">
-                        @foreach ($videoList as $video)
+                <div class="text-left">
+                    <div class="col-12 my-3">
+                        <div class="owl-carousel owl-theme" id="pgal-carousel">
+                            @foreach ($galleryphotos as $photo)
                             <div class="item">
                                 <div class="thumbnail" href="#">
-
-                                            <iframe width="100%" height="300px" src="https://www.youtube.com/embed/{!!$video->id->videoId!!}" frameborder="0" allowfullscreen></iframe>
-
+                                    <img src="{{ URL::to('/uploads/files/gallery/'.$photo->imagename)  }}"  class="img-fluid" id="img-item">
                                 </div>
                             </div>
-                        @endforeach
-
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- //Gallery Image End -->
+            <!-- Gallery Video Start -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-12">
+                <div class="row text-center">
+                    <div class="col-12 my-3">
+                        <h3 class="border-warning"><span class="heading_border bg-warning mx-auto">Video Gallery</span></h3>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <div class="col-12 my-3">
+                        <div class="owl-carousel owl-theme" id="vgal-carousel">
+                            @foreach ($videoList as $video)
+                                <div class="item">
+                                    <div class="thumbnail" href="#">
+
+                                                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/{!!$video->id->videoId!!}" frameborder="0" allowfullscreen></iframe>
+
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Gallery Video End -->
         </div>
-        <!-- //Gallery Video End -->
     </div>
-    <!-- //Gallery End -->
-</div>
+</section>
+<!-- //Gallery End -->
  <!-- //Container End -->
  {{-- <div class="modal fade" role="dialog" id="img-zoom">
         <div class="modal-dialog">

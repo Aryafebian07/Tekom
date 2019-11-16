@@ -11,6 +11,7 @@ use App\Models\Dosen\Dosen;
 use App\Models\Testimonial\Testimonial;
 use App\models\Headercarousel\HeaderCarousel;
 use App\Models\Gallery\GalleryPhoto;
+use App\Models\Tugasakhir\TugasAkhir;
 use Illuminate\Http\Request;
 use Alaouy\Youtube\Facades\Youtube;
 use Vinkla\Instagram\Instagram;
@@ -54,6 +55,12 @@ class HomeController extends JoshController
         $galleryphotos = GalleryPhoto::latest()->get();
         return view('gallery', compact('galleryphotos'));
     }
+
+    function tugasakhir_index(){
+        $tugasAkhirs = TugasAkhir::all();
+        return view('tugasakhir', compact('tugasAkhirs'));
+    }
+
 
     public function instagramFeed(){
 

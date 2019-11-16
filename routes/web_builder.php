@@ -93,3 +93,18 @@ Route::get('testimonials/{testimonials}', ['as'=> 'testimonials.show', 'uses' =>
 Route::get('testimonials/{testimonials}/edit', ['as'=> 'testimonials.edit', 'uses' => 'Testimonial\TestimonialController@edit']);
 
 });
+
+
+Route::group(array('prefix' => 'admin/tugasAkhir/','namespace' => 'Admin','middleware' => 'admin','as'=>'admin.tugasAkhir.'), function () {
+
+Route::get('tugasAkhirs', ['as'=> 'tugasAkhirs.index', 'uses' => 'Tugasakhir\TugasAkhirController@index']);
+Route::post('tugasAkhirs', ['as'=> 'tugasAkhirs.store', 'uses' => 'Tugasakhir\TugasAkhirController@store']);
+Route::get('tugasAkhirs/create', ['as'=> 'tugasAkhirs.create', 'uses' => 'Tugasakhir\TugasAkhirController@create']);
+Route::put('tugasAkhirs/{tugasAkhirs}', ['as'=> 'tugasAkhirs.update', 'uses' => 'Tugasakhir\TugasAkhirController@update']);
+Route::patch('tugasAkhirs/{tugasAkhirs}', ['as'=> 'tugasAkhirs.update', 'uses' => 'Tugasakhir\TugasAkhirController@update']);
+Route::get('tugasAkhirs/{id}/delete', array('as' => 'tugasAkhirs.delete', 'uses' => 'Tugasakhir\TugasAkhirController@getDelete'));
+Route::get('tugasAkhirs/{id}/confirm-delete', array('as' => 'tugasAkhirs.confirm-delete', 'uses' => 'Tugasakhir\TugasAkhirController@getModalDelete'));
+Route::get('tugasAkhirs/{tugasAkhirs}', ['as'=> 'tugasAkhirs.show', 'uses' => 'Tugasakhir\TugasAkhirController@show']);
+Route::get('tugasAkhirs/{tugasAkhirs}/edit', ['as'=> 'tugasAkhirs.edit', 'uses' => 'Tugasakhir\TugasAkhirController@edit']);
+
+});

@@ -47,3 +47,11 @@
     </a>
 </li>
 
+<li class="{{ Request::is('admin/tugasAkhir/tugasAkhirs*') ? 'active' : '' }}">
+    <a href="{!! route('admin.tugasAkhir.tugasAkhirs.index') !!}">
+    <i class="livicon" data-c="#EF6F6C" data-hc="#EF6F6C" data-name="list" data-size="18"
+               data-loop="true"></i>
+               TugasAkhirs
+    </a>
+</li>
+
